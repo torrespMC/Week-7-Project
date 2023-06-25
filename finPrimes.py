@@ -4,11 +4,11 @@ def guess():
     return random.randint(2, 5000)
 
 def isPrime(x):
-    for i in range(x):
-        for j in range(x):
-            if i * j == x:
+        # check for factors
+        for i in range(2, x):
+            if (x % i) == 0:
                 return False
-    return True
+        return True
 
 def findPrimes(num):
     primes = []
